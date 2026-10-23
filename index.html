@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PixelNova Gaming — a home for indie games, updates, and downloads.">
+  <title>PixelNova Gaming</title>
+  <style>
+    :root { --bg:#070b16; --panel:#10182b; --blue:#27baff; --cyan:#65f3ff; --text:#eef7ff; --muted:#9bb0c9; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,Segoe UI,Arial,sans-serif; background:radial-gradient(ellipse at 80% 0%,#102b50 0,transparent 38%),var(--bg); color:var(--text); }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1100px,92%); margin:auto; }
+    header { position:sticky; top:0; z-index:5; background:#070b16df; backdrop-filter:blur(12px); border-bottom:1px solid #20314b; }
+    nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:900; font-size:1.25rem; letter-spacing:.5px; }
+    .brand span { color:var(--cyan); text-shadow:0 0 18px #27baff88; }
+    .links { display:flex; gap:24px; color:var(--muted); font-size:.95rem; }
+    .links a:hover { color:var(--cyan); }
+    .hero { padding:88px 0 72px; display:grid; grid-template-columns:1.15fr .85fr; gap:36px; align-items:center; }
+    .eyebrow { color:var(--cyan); font-weight:800; letter-spacing:3px; font-size:.78rem; }
+    h1 { font-size:clamp(2.7rem,6vw,5.2rem); line-height:.98; margin:18px 0; letter-spacing:-2px; }
+    h1 span { color:var(--cyan); text-shadow:0 0 28px #27baff55; }
+    p { color:var(--muted); line-height:1.75; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .btn { display:inline-block; padding:13px 18px; border-radius:10px; font-weight:800; border:1px solid #2b5277; }
+    .primary { background:linear-gradient(100deg,#1689f8,#35d9ef); color:#04101c; border:0; box-shadow:0 0 25px #21baff33; }
+    .visual { min-height:320px; border:1px solid #245079; border-radius:24px; background:linear-gradient(145deg,#142746,#09101f 70%); display:grid; place-items:center; position:relative; overflow:hidden; box-shadow:0 0 60px #078cff18,inset 0 0 40px #078cff12; }
+    .visual:before,.visual:after { content:""; position:absolute; border:1px solid #2bbcff55; border-radius:50%; width:270px; height:270px; transform:rotate(-25deg); }
+    .visual:after { width:200px;height:200px; transform:rotate(35deg); border-color:#65f3ff77; }
+    .symbol { z-index:1; font-size:7rem; font-weight:1000; color:var(--cyan); text-shadow:0 0 22px #27baff,0 0 65px #27baff88; }
+    section { padding:44px 0; }
+    .section-title { font-size:2rem; margin:0 0 8px; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:24px; }
+    .card { background:linear-gradient(145deg,#111c31,#0b1221); border:1px solid #203b5d; border-radius:16px; padding:22px; min-height:190px; }
+    .card .icon { font-size:2rem; }
+    .card h3 { margin:14px 0 6px; }
+    .card p { margin:0; font-size:.94rem; }
+    .notice { border:1px dashed #2b668f; background:#0d1a2b; border-radius:14px; padding:18px; margin-top:22px; }
+    footer { margin-top:40px; border-top:1px solid #20314b; padding:26px 0; color:var(--muted); font-size:.9rem; }
+    @media(max-width:760px) { .hero { grid-template-columns:1fr; padding-top:58px; } .visual { min-height:230px; } .grid { grid-template-columns:1fr; } .links { gap:12px; font-size:.85rem; } h1 { letter-spacing:-1px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#home">PIXEL<span>NOVA</span></a>
+      <div class="links">
+        <a href="#home">Home</a><a href="#games">Games</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero wrap" id="home">
+      <div>
+        <div class="eyebrow">WELCOME TO THE NEXT LEVEL</div>
+        <h1>PLAY BIG.<br><span>THINK NOVA.</span></h1>
+        <p>Welcome to PixelNova Gaming — your home for original games, development updates, and new adventures. Our first game is in development.</p>
+        <div class="actions">
+          <a class="btn primary" href="#games">Explore Games</a>
+          <a class="btn" href="#about">About PixelNova</a>
+        </div>
+      </div>
+      <div class="visual" aria-label="PixelNova neon logo artwork"><div class="symbol">P<span style="color:#eef7ff">N</span></div></div>
+    </section>
+    <section class="wrap" id="games">
+      <div class="eyebrow">GAME LIBRARY</div>
+      <h2 class="section-title">Featured Games</h2>
+      <p>Our game collection starts here. Add your own game details when your project is ready.</p>
+      <div class="grid">
+        <article class="card"><div class="icon">🎯</div><h3>Project Nova</h3><p>Our first game project. More information and a playable build will be added soon.</p></article>
+        <article class="card"><div class="icon">⚡</div><h3>Coming Soon</h3><p>New ideas, prototypes, and updates from the PixelNova workshop.</p></article>
+        <article class="card"><div class="icon">🕹️</div><h3>Development Log</h3><p>Follow the journey as we build and improve our games.</p></article>
+      </div>
+      <div class="notice"><strong>Game not available yet?</strong><p style="margin:6px 0 0">This is a starter website. Replace this message with your game download link or a browser-playable build once you have one ready.</p></div>
+    </section>
+    <section class="wrap" id="about">
+      <div class="eyebrow">ABOUT US</div><h2 class="section-title">Built for curious players.</h2>
+      <p>PixelNova is an independent gaming project focused on creativity, learning, and fun. This site is the starting point for sharing our games with the world.</p>
+    </section>
+    <section class="wrap" id="contact">
+      <div class="eyebrow">GET IN TOUCH</div><h2 class="section-title">Contact PixelNova</h2>
+      <p>Add a public creator email or your gaming social links here when you're ready. Don't publish your home address or private information.</p>
+    </section>
+  </main>
+  <footer><div class="wrap">© <span id="year"></span> PixelNova Gaming. Made with curiosity.</div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
